@@ -1,0 +1,418 @@
+.page-content {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.app-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px;
+}
+
+@media (max-width: 768px) {
+    .red-aside {
+        width: 200px;
+    }
+
+    .main-content,
+    .app-container {
+        margin-left: 200px;
+    }
+}
+
+body {
+  margin: 0;
+}
+
+.card {
+  background-color: #282c3449;
+  width: 280px;
+  height: auto;
+  margin: 10px 30px 10px 30px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: auto;
+  object-fit: cover;
+}
+
+.content {
+  padding: 15px;
+}
+
+.name {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.description {
+  color: #666;
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  width: auto;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+.dotaButton {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    font-family: 'Reaver', 'Radiance', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #e2d7b0;
+    background: linear-gradient(to right, #3d352a, #5a4d3a);
+    border: 2px solid #937341;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px rgba(226, 215, 176, 0.5);
+}
+
+.dotaButton::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(147, 115, 65, 0) 0%,
+        rgba(147, 115, 65, 0) 45%,
+        rgba(147, 115, 65, 0.5) 50%,
+        rgba(147, 115, 65, 0) 55%,
+        rgba(147, 115, 65, 0) 100%
+    );
+    transform: rotate(30deg);
+    transition: all 0.5s ease;
+}
+
+.dotaButton:hover {
+    color: #fff9e6;
+    background: linear-gradient(to right, #4d4232, #6b5a45);
+    box-shadow: 0 0 15px rgba(147, 115, 65, 0.5);
+}
+
+.dotaButton:hover::before {
+    left: 100%;
+}
+
+.dotaButton:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 5px rgba(147, 115, 65, 0.5);
+}
+@font-face {
+  font-family: 'Reaver';
+  src: url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Radiance';
+  src: url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.App {
+    width: 70vw;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blood-title {
+    font-family: 'Black Ops One', 'Agency FB', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #ff1a1a;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 30px 0;
+    padding: 20px;
+    position: relative;
+    text-shadow:
+        0 0 5px #800000,
+        0 0 10px #b30000,
+        0 0 20px #ff0000,
+        0 0 30px #ff4d4d;
+    background: linear-gradient(
+        to right,
+        rgba(102, 0, 0, 0.2),
+        rgba(140, 0, 0, 0.4),
+        rgba(102, 0, 0, 0.2)
+    );
+    border: 3px solid #990000;
+    border-radius: 8px;
+    box-shadow:
+        0 0 15px rgba(230, 0, 0, 0.6),
+        inset 0 0 20px rgba(139, 0, 0, 0.4);
+    transform: perspective(400px) rotateX(10deg);
+    animation: blood-pulse 1.5s infinite alternate;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bebas+Neue&display=swap');
+
+.upcoming-text {
+    font-family: 'Bebas Neue', 'Arial Narrow', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #ff3a3a;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 50px 0;
+    padding: 15px;
+    position: relative;
+    text-shadow:
+        0 0 5px #ff0000,
+        0 0 10px #ff3333,
+        0 0 20px #ff6666;
+    background: linear-gradient(to right,
+        rgba(139, 0, 0, 0.3),
+        rgba(178, 34, 34, 0.5),
+        rgba(139, 0, 0, 0.3));
+    border: 2px solid #ff5555;
+    border-radius: 5px;
+    box-shadow:
+        0 0 10px rgba(255, 0, 0, 0.5),
+        inset 0 0 10px rgba(255, 0, 0, 0.3);
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    from {
+        text-shadow:
+            0 0 5px #ff0000,
+            0 0 10px #ff3333,
+            0 0 20px #ff6666;
+        box-shadow:
+            0 0 10px rgba(255, 0, 0, 0.5),
+            inset 0 0 10px rgba(255, 0, 0, 0.3);
+    }
+    to {
+        text-shadow:
+            0 0 10px #ff0000,
+            0 0 20px #ff3333,
+            0 0 30px #ff6666;
+        box-shadow:
+            0 0 20px rgba(255, 0, 0, 0.7),
+            inset 0 0 15px rgba(255, 0, 0, 0.5);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Playfair+Display:wght@400;600&display=swap');
+
+                .red-aside {
+                    width: 250px;
+                    background: linear-gradient(135deg, #8B0000, #FF0000);
+                    color: white;
+                    height: 100vh;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    padding-top: 60px; /* Чтобы не перекрывалось хедером */
+                    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+                    z-index: 100;
+                }
+
+                .aside-content {
+                    padding: 20px;
+                }
+
+                .aside-title {
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    border-bottom: 2px solid white;
+                    padding-bottom: 10px;
+                }
+
+                .aside-links {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+
+                .aside-link {
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                }
+
+                .aside-link:hover {
+                    background-color: rgba(255, 255, 255, 0.2);
+                    transform: translateX(5px);
+                }
+
+
+                .app-container {
+                    margin-left: 250px;
+                    padding: 20px;
+                }
+
+
+                .navbar {
+                    position: fixed;
+                    top: 0;
+                    left: 250px;
+                    right: 0;
+                    z-index: 100;
+                }
+
+                .nav-link {
+                    font-family: 'Cormorant Garamond', serif;
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    letter-spacing: 0.5px;
+                    position: relative;
+                    padding: 0.5rem 1rem;
+                    transition: all 0.3s ease;
+                    text-transform: uppercase;
+                }
+
+                .nav-link:hover {
+                    color: #f8f3ff;
+                    transform: translateY(-2px);
+                }
+
+                .nav-link:after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: 0;
+                    left: 50%;
+                    background-color: #f8f3ff;
+                    transition: all 0.3s ease;
+                    transform: translateX(-50%);
+                }
+
+                .nav-link:hover:after {
+                    width: 100%;
+                }
+
+                .nav-link.active {
+                    color: #ffd700;
+                }
+
+                .red-header {
+                    background: linear-gradient(135deg, #8B0000, #B22222);
+                    color: white;
+                    padding: 0 20px;
+                    position: fixed;
+                    top: 0;
+                    left: 250px;
+                    right: 0;
+                    height: 60px;
+                    z-index: 1000;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+                    display: flex;
+                    align-items: center;
+                }
+
+                .header-container {
+                    width: 100%;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+
+                .nav-links {
+                    display: flex;
+                    gap: 30px;
+                }
+
+                .nav-link {
+                    color: black;
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 1.1rem;
+                    position: relative;
+                    padding: 5px 0;
+                    transition: all 0.3s ease;
+                }
+
+                .nav-link:hover {
+                    color: #FFD700;
+                }
+
+                .nav-link::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: #FFD700;
+                    transition: width 0.3s ease;
+                }
+
+                .nav-link:hover::after {
+                    width: 100%;
+                }
+
+                .cart-link {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+                .cart-count {
+                    background-color: #FFD700;
+                    color: #8B0000;
+                    border-radius: 50%;
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                }
+
+
+                .main-content {
+                    margin-top: 60px;
+                    margin-left: 250px;
+                    padding: 20px;
+                }
